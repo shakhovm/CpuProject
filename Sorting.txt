@@ -1,0 +1,54 @@
+mvd r2, 1    121
+mvd r0, 0	 100
+mvd r1, 6	 116	
+mva r1, r0	 201
+mvd r1, 3	 113
+add r0, r2	 902
+mva r1, r0	 201
+add r0, r2	 902
+mvd r1, 0	 110
+add r0, r2	 201
+mva r1, r0	 114
+mvd r1, 4	 902
+add r0, r2	 201
+mva r1, r0	 115
+mvd r1, 5	 902
+add r0, r2	 201
+mva r1, r0	 112
+mvd r1, 2	 902
+add r0, r2	 201
+mva r1, r0	 111
+mvd r1, 1	 902
+add r0, r2	 201
+mva r1, r0	 210
+mvd r3, 7	 137
+mvd r0, 1	 101
+
+
+L1:
+	mvr r6, r0  060
+	sub r6, r3  663
+	je L4		cL4
+	mvf r4, r0  340
+	mvr r1, r0  010
+L2:
+	sub r1, r2  612
+	jls L3      dL3
+	mvf r7, r1  371
+	sub r7, r4  674
+	jle L3		eL3
+
+	mvr r5, r1  051
+	add r5, r2  952
+	mvf r6, r1  361
+	mva r5, r6  256
+	sub r6, r6  666
+	je L2	    cL2
+L3:
+	mvr r6, r1  061
+	add r6, r2	962
+	mva r6, r4  264
+	add r0, r2	901
+	sub r7, r7	677
+	je L1		cL1
+L4:
