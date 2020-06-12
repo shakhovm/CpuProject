@@ -1,0 +1,230 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Intel/logisimExample/simulation/qsim
+Eblock2
+Z1 w1585401827
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+R0
+Z9 8logisimExample.vho
+Z10 FlogisimExample.vho
+l0
+L36
+VcBO;T69PBDmhGH>_IWFm;0
+!s100 QQ?dzQP6;ca?4mk^95]=?1
+Z11 OV;C;10.5b;63
+32
+Z12 !s110 1585401832
+!i10b 1
+Z13 !s108 1585401831.000000
+Z14 !s90 -work|work|logisimExample.vho|
+Z15 !s107 logisimExample.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 6 block2 0 22 cBO;T69PBDmhGH>_IWFm;0
+l74
+L52
+V;lefbJF[f8:e@X]6_cOKm2
+!s100 3Yz9F2LbDd>Dh:<WZ2JMY0
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+vBlock2
+Z18 !s110 1586519784
+!i10b 1
+!s100 X:P=dWezo5C40a5ZbEU0S1
+IXP[LXTl^>3U4egC5Lk]`12
+Z19 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1586519768
+8logisimExample.vo
+FlogisimExample.vo
+L0 31
+Z20 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1586519783.000000
+!s107 logisimExample.vo|
+!s90 -work|work|logisimExample.vo|
+!i113 1
+R16
+Z21 tCvgOpt 0
+n@block2
+Eblock2_vhd_vec_tst
+Z22 w1585401824
+R6
+R7
+R0
+Z23 8Waveform.vwf.vht
+Z24 FWaveform.vwf.vht
+l0
+L31
+V49i6:E2PUhCeEo3^k:Og13
+!s100 MGZ?<A<`V`h^IUja0dR6D0
+R11
+32
+R12
+!i10b 1
+Z25 !s108 1585401832.000000
+Z26 !s90 -work|work|Waveform.vwf.vht|
+Z27 !s107 Waveform.vwf.vht|
+!i113 1
+R16
+R17
+Ablock2_arch
+R6
+R7
+DEx4 work 18 block2_vhd_vec_tst 0 22 49i6:E2PUhCeEo3^k:Og13
+l48
+L33
+V9e_1PZB7IiUFZlX4NMQEz2
+!s100 [aU5`W1FS]OR;AGmfQMB;0
+R11
+32
+R12
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R16
+R17
+vBlock2_vlg_vec_tst
+R18
+!i10b 1
+!s100 cX[Ue5]S1h^nCJ^g55R142
+I9JfV78YVEgAQczjG[ZIjW3
+R19
+R0
+w1586519763
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R20
+r1
+!s85 0
+31
+!s108 1586519784.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R16
+R21
+n@block2_vlg_vec_tst
+Elogisimexample
+Z28 w1585400969
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R0
+R9
+R10
+l0
+L36
+VlQ:FDAbWNOdzbQ4AR4Kei3
+!s100 gRz=KFO`fd6IM7a4mUkWh2
+R11
+32
+Z29 !s110 1585400971
+!i10b 1
+Z30 !s108 1585400971.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 14 logisimexample 0 22 lQ:FDAbWNOdzbQ4AR4Kei3
+l70
+L50
+VH?Q0b3LGOoMQ4OTTfBjII1
+!s100 XnGF4gJXSnNXD9m=b3AJM1
+R11
+32
+R29
+!i10b 1
+R30
+R14
+R15
+!i113 1
+R16
+R17
+Elogisimexample_vhd_vec_tst
+Z31 w1585400966
+R6
+R7
+R0
+R23
+R24
+l0
+L31
+V0C<nWCGFU:o6cF1zfAA:33
+!s100 DQkJ1^_XCU_:Z?<e0:STl2
+R11
+32
+R29
+!i10b 1
+R30
+R26
+R27
+!i113 1
+R16
+R17
+Alogisimexample_arch
+R6
+R7
+DEx4 work 26 logisimexample_vhd_vec_tst 0 22 0C<nWCGFU:o6cF1zfAA:33
+l46
+L33
+V0Ee<@_d;gzkaffLJ_?1ZY0
+!s100 TjAH4;n^Q11^^eS_O^j?:0
+R11
+32
+R29
+!i10b 1
+R30
+R26
+R27
+!i113 1
+R16
+R17

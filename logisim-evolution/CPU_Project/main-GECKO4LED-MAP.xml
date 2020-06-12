@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LogisimGoesFPGABoardMapInformation>
+<GlobalMapInformation BoardName="GECKO4LED" ToplevelCircuitName="main"/>
+<MAPPEDCOMPONENT_1 Height="20" Key="BUS: /OP#Pin0" LocationX="36" LocationY="47" Width="20"/>
+<MAPPEDCOMPONENT_2 Height="20" Key="BUS: /OP#Pin1" LocationX="68" LocationY="47" Width="20"/>
+<MAPPEDCOMPONENT_3 Height="20" Key="BUS: /OP#Pin2" LocationX="99" LocationY="47" Width="20"/>
+<MAPPEDCOMPONENT_4 Height="20" Key="BUS: /OP#Pin3" LocationX="131" LocationY="47" Width="20"/>
+<MAPPEDCOMPONENT_5 Height="20" Key="BUS: /r0#Pin0" LocationX="161" LocationY="47" Width="20"/>
+<MAPPEDCOMPONENT_6 Height="20" Key="BUS: /r0#Pin1" LocationX="192" LocationY="47" Width="20"/>
+<MAPPEDCOMPONENT_7 Height="20" Key="BUS: /r0#Pin2" LocationX="220" LocationY="47" Width="20"/>
+<MAPPEDCOMPONENT_8 Height="20" Key="BUS: /r0#Pin3" LocationX="251" LocationY="47" Width="20"/>
+<MAPPEDCOMPONENT_9 Height="20" Key="BUS: /r1#Pin0" LocationX="251" LocationY="87" Width="20"/>
+<MAPPEDCOMPONENT_a Height="20" Key="BUS: /r1#Pin1" LocationX="220" LocationY="87" Width="20"/>
+<MAPPEDCOMPONENT_b Height="20" Key="BUS: /r1#Pin2" LocationX="192" LocationY="87" Width="20"/>
+<MAPPEDCOMPONENT_c Height="20" Key="BUS: /r1#Pin3" LocationX="161" LocationY="87" Width="20"/>
+<MAPPEDCOMPONENT_d Height="20" Key="BUS: /r2#Pin0" LocationX="131" LocationY="87" Width="20"/>
+<MAPPEDCOMPONENT_e Height="20" Key="BUS: /r2#Pin1" LocationX="99" LocationY="87" Width="20"/>
+<MAPPEDCOMPONENT_f Height="20" Key="BUS: /r2#Pin2" LocationX="68" LocationY="87" Width="20"/>
+<MAPPEDCOMPONENT_10 Height="20" Key="BUS: /r2#Pin3" LocationX="36" LocationY="87" Width="20"/>
+<MAPPEDCOMPONENT_11 Height="20" Key="BUS: /r3#Pin0" LocationX="36" LocationY="127" Width="20"/>
+<MAPPEDCOMPONENT_12 Height="20" Key="BUS: /r3#Pin1" LocationX="68" LocationY="127" Width="20"/>
+<MAPPEDCOMPONENT_13 Height="20" Key="BUS: /r3#Pin2" LocationX="99" LocationY="127" Width="20"/>
+<MAPPEDCOMPONENT_14 Height="20" Key="BUS: /r3#Pin3" LocationX="131" LocationY="127" Width="20"/>
+<MAPPEDCOMPONENT_15 Height="20" Key="BUS: /r4#Pin0" LocationX="161" LocationY="127" Width="20"/>
+<MAPPEDCOMPONENT_16 Height="20" Key="BUS: /r4#Pin1" LocationX="192" LocationY="127" Width="20"/>
+<MAPPEDCOMPONENT_17 Height="20" Key="BUS: /r4#Pin2" LocationX="220" LocationY="127" Width="20"/>
+<MAPPEDCOMPONENT_18 Height="20" Key="BUS: /r4#Pin3" LocationX="251" LocationY="127" Width="20"/>
+<MAPPEDCOMPONENT_19 Height="20" Key="BUS: /r5#Pin0" LocationX="251" LocationY="167" Width="20"/>
+<MAPPEDCOMPONENT_1a Height="20" Key="BUS: /r5#Pin1" LocationX="220" LocationY="167" Width="20"/>
+<MAPPEDCOMPONENT_1b Height="20" Key="BUS: /r5#Pin2" LocationX="192" LocationY="167" Width="20"/>
+<MAPPEDCOMPONENT_1c Height="20" Key="BUS: /r5#Pin3" LocationX="161" LocationY="167" Width="20"/>
+<MAPPEDCOMPONENT_1d Height="20" Key="BUS: /r6#Pin0" LocationX="131" LocationY="167" Width="20"/>
+<MAPPEDCOMPONENT_1e Height="20" Key="BUS: /r6#Pin1" LocationX="99" LocationY="167" Width="20"/>
+<MAPPEDCOMPONENT_1f Height="20" Key="BUS: /r6#Pin2" LocationX="68" LocationY="167" Width="20"/>
+<MAPPEDCOMPONENT_20 Height="20" Key="BUS: /r6#Pin3" LocationX="36" LocationY="167" Width="20"/>
+<MAPPEDCOMPONENT_21 Height="20" Key="BUS: /r7#Pin0" LocationX="68" LocationY="207" Width="20"/>
+<MAPPEDCOMPONENT_22 Height="20" Key="BUS: /r7#Pin1" LocationX="36" LocationY="207" Width="20"/>
+<MAPPEDCOMPONENT_23 Height="20" Key="BUS: /r7#Pin2" LocationX="99" LocationY="207" Width="20"/>
+<MAPPEDCOMPONENT_24 Height="20" Key="BUS: /r7#Pin3" LocationX="131" LocationY="207" Width="20"/>
+<MAPPEDCOMPONENT_25 Height="48" Key="PIN: /Input_1#Button0" LocationX="424" LocationY="326" Width="46"/>
+</LogisimGoesFPGABoardMapInformation>

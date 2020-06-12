@@ -1,0 +1,2302 @@
+|Block2
+OP[0] <= main:inst.OP[0]
+OP[1] <= main:inst.OP[1]
+OP[2] <= main:inst.OP[2]
+OP[3] <= main:inst.OP[3]
+CLK => main:inst.Input_1
+r0[0] <= main:inst.r0[0]
+r0[1] <= main:inst.r0[1]
+r0[2] <= main:inst.r0[2]
+r0[3] <= main:inst.r0[3]
+r1[0] <= main:inst.r1[0]
+r1[1] <= main:inst.r1[1]
+r1[2] <= main:inst.r1[2]
+r1[3] <= main:inst.r1[3]
+r2[0] <= main:inst.r2[0]
+r2[1] <= main:inst.r2[1]
+r2[2] <= main:inst.r2[2]
+r2[3] <= main:inst.r2[3]
+r3[0] <= main:inst.r3[0]
+r3[1] <= main:inst.r3[1]
+r3[2] <= main:inst.r3[2]
+r3[3] <= main:inst.r3[3]
+r4[0] <= main:inst.r4[0]
+r4[1] <= main:inst.r4[1]
+r4[2] <= main:inst.r4[2]
+r4[3] <= main:inst.r4[3]
+r5[0] <= main:inst.r5[0]
+r5[1] <= main:inst.r5[1]
+r5[2] <= main:inst.r5[2]
+r5[3] <= main:inst.r5[3]
+r6[0] <= main:inst.r6[0]
+r6[1] <= main:inst.r6[1]
+r6[2] <= main:inst.r6[2]
+r6[3] <= main:inst.r6[3]
+r7[0] <= main:inst.r7[0]
+r7[1] <= main:inst.r7[1]
+r7[2] <= main:inst.r7[2]
+r7[3] <= main:inst.r7[3]
+
+
+|Block2|main:inst
+Input_1 => s_LOGISIM_NET_1.IN3
+OP[0] <= s_LOGISIM_BUS_52[0].DB_MAX_OUTPUT_PORT_TYPE
+OP[1] <= s_LOGISIM_BUS_52[1].DB_MAX_OUTPUT_PORT_TYPE
+OP[2] <= s_LOGISIM_BUS_52[2].DB_MAX_OUTPUT_PORT_TYPE
+OP[3] <= s_LOGISIM_BUS_52[3].DB_MAX_OUTPUT_PORT_TYPE
+r0[0] <= MyRam:RAM_CPU.Output_bus_2
+r0[1] <= MyRam:RAM_CPU.Output_bus_2
+r0[2] <= MyRam:RAM_CPU.Output_bus_2
+r0[3] <= MyRam:RAM_CPU.Output_bus_2
+r1[0] <= MyRam:RAM_CPU.Output_bus_3
+r1[1] <= MyRam:RAM_CPU.Output_bus_3
+r1[2] <= MyRam:RAM_CPU.Output_bus_3
+r1[3] <= MyRam:RAM_CPU.Output_bus_3
+r2[0] <= MyRam:RAM_CPU.Output_bus_4
+r2[1] <= MyRam:RAM_CPU.Output_bus_4
+r2[2] <= MyRam:RAM_CPU.Output_bus_4
+r2[3] <= MyRam:RAM_CPU.Output_bus_4
+r3[0] <= MyRam:RAM_CPU.Output_bus_5
+r3[1] <= MyRam:RAM_CPU.Output_bus_5
+r3[2] <= MyRam:RAM_CPU.Output_bus_5
+r3[3] <= MyRam:RAM_CPU.Output_bus_5
+r4[0] <= MyRam:RAM_CPU.Output_bus_6
+r4[1] <= MyRam:RAM_CPU.Output_bus_6
+r4[2] <= MyRam:RAM_CPU.Output_bus_6
+r4[3] <= MyRam:RAM_CPU.Output_bus_6
+r5[0] <= MyRam:RAM_CPU.Output_bus_7
+r5[1] <= MyRam:RAM_CPU.Output_bus_7
+r5[2] <= MyRam:RAM_CPU.Output_bus_7
+r5[3] <= MyRam:RAM_CPU.Output_bus_7
+r6[0] <= MyRam:RAM_CPU.Output_bus_8
+r6[1] <= MyRam:RAM_CPU.Output_bus_8
+r6[2] <= MyRam:RAM_CPU.Output_bus_8
+r6[3] <= MyRam:RAM_CPU.Output_bus_8
+r7[0] <= MyRam:RAM_CPU.Output_bus_9
+r7[1] <= MyRam:RAM_CPU.Output_bus_9
+r7[2] <= MyRam:RAM_CPU.Output_bus_9
+r7[3] <= MyRam:RAM_CPU.Output_bus_9
+
+
+|Block2|main:inst|Multiplexer_bus_2:MUX_1
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+MuxIn_0[0] => s_selected_vector.DATAA
+MuxIn_0[1] => s_selected_vector.DATAA
+MuxIn_0[2] => s_selected_vector.DATAA
+MuxIn_0[3] => s_selected_vector.DATAA
+MuxIn_1[0] => s_selected_vector.DATAB
+MuxIn_1[1] => s_selected_vector.DATAB
+MuxIn_1[2] => s_selected_vector.DATAB
+MuxIn_1[3] => s_selected_vector.DATAB
+Sel => Decoder0.IN0
+MuxOut[0] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[1] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[2] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[3] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|NOT_GATE:GATE_1
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Multiplexer_bus_4:MUX_2
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+MuxIn_0[0] => Mux3.IN0
+MuxIn_0[1] => Mux2.IN0
+MuxIn_0[2] => Mux1.IN0
+MuxIn_0[3] => Mux0.IN0
+MuxIn_1[0] => Mux3.IN1
+MuxIn_1[1] => Mux2.IN1
+MuxIn_1[2] => Mux1.IN1
+MuxIn_1[3] => Mux0.IN1
+MuxIn_2[0] => Mux3.IN2
+MuxIn_2[1] => Mux2.IN2
+MuxIn_2[2] => Mux1.IN2
+MuxIn_2[3] => Mux0.IN2
+MuxIn_3[0] => Mux3.IN3
+MuxIn_3[1] => Mux2.IN3
+MuxIn_3[2] => Mux1.IN3
+MuxIn_3[3] => Mux0.IN3
+Sel[0] => Mux0.IN5
+Sel[0] => Mux1.IN5
+Sel[0] => Mux2.IN5
+Sel[0] => Mux3.IN5
+Sel[1] => Mux0.IN4
+Sel[1] => Mux1.IN4
+Sel[1] => Mux2.IN4
+Sel[1] => Mux3.IN4
+MuxOut[0] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[1] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[2] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[3] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|AND_GATE:GATE_2
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Demultiplexer_2:DEMUX_1
+DemuxIn => DemuxOut_0.DATAB
+DemuxIn => DemuxOut_1.DATAB
+Enable => DemuxOut_0.IN0
+Enable => DemuxOut_1.IN0
+Sel => DemuxOut_1.IN1
+Sel => DemuxOut_0.IN1
+DemuxOut_0 <= DemuxOut_0.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_1 <= DemuxOut_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|NOT_GATE:GATE_3
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|OR_GATE:GATE_4
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|AND_GATE:GATE_5
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|NOR_GATE:GATE_6
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Multiplexer_4:MUX_3
+Enable => s_selected_vector.OUTPUTSELECT
+MuxIn_0 => Mux0.IN0
+MuxIn_1 => Mux0.IN1
+MuxIn_2 => Mux0.IN2
+MuxIn_3 => Mux0.IN3
+Sel[0] => Mux0.IN5
+Sel[1] => Mux0.IN4
+MuxOut <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Multiplexer_bus_2:MUX_4
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+MuxIn_0[0] => s_selected_vector.DATAA
+MuxIn_0[1] => s_selected_vector.DATAA
+MuxIn_0[2] => s_selected_vector.DATAA
+MuxIn_0[3] => s_selected_vector.DATAA
+MuxIn_1[0] => s_selected_vector.DATAB
+MuxIn_1[1] => s_selected_vector.DATAB
+MuxIn_1[2] => s_selected_vector.DATAB
+MuxIn_1[3] => s_selected_vector.DATAB
+Sel => Decoder0.IN0
+MuxOut[0] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[1] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[2] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[3] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|L_2_bit_Trigger_61c2be1b:FF
+Input_1 => s_LOGISIM_NET_2.IN1
+Input_bus_1[0] => s_LOGISIM_BUS_1[0].IN1
+Input_bus_1[1] => s_LOGISIM_BUS_1[1].IN1
+Output_bus_1[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+Output_bus_1[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|L_2_bit_Trigger_61c2be1b:FF|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|PC:PrCount
+Clock => s_LOGISIM_NET_3.IN1
+DoJump => s_LOGISIM_NET_7.IN1
+A[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+A[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+A[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+A[3] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+B[0] <= B[0].DB_MAX_OUTPUT_PORT_TYPE
+B[1] <= B[1].DB_MAX_OUTPUT_PORT_TYPE
+B[2] <= B[2].DB_MAX_OUTPUT_PORT_TYPE
+B[3] <= B[3].DB_MAX_OUTPUT_PORT_TYPE
+command[0] <= ROM_CPU_123wd:ROM_1.Data
+command[1] <= ROM_CPU_123wd:ROM_1.Data
+command[2] <= s_LOGISIM_BUS_6[10].DB_MAX_OUTPUT_PORT_TYPE
+command[3] <= s_LOGISIM_BUS_6[11].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|PC:PrCount|AND_GATE_3_INPUTS:GATE_1
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|PC:PrCount|ROM_CPU_123wd:ROM_1
+Address[0] => Decoder0.IN7
+Address[1] => Decoder0.IN6
+Address[2] => Decoder0.IN5
+Address[3] => Decoder0.IN4
+Address[4] => Decoder0.IN3
+Address[5] => Decoder0.IN2
+Address[6] => Decoder0.IN1
+Address[7] => Decoder0.IN0
+Data[0] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+Data[1] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+Data[2] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+Data[3] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+Data[4] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Data[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Data[6] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Data[7] <= <GND>
+Data[8] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Data[9] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Data[10] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Data[11] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|PC:PrCount|LogisimCounter:COUNTER_1
+ClockEnable => s_real_enable.DATAA
+Enable => s_real_enable.IN0
+GlobalClock => s_counter_value[0].CLK
+GlobalClock => s_counter_value[1].CLK
+GlobalClock => s_counter_value[2].CLK
+GlobalClock => s_counter_value[3].CLK
+GlobalClock => s_counter_value[4].CLK
+GlobalClock => s_counter_value[5].CLK
+GlobalClock => s_counter_value[6].CLK
+GlobalClock => s_counter_value[7].CLK
+LoadData[0] => s_next_counter_value[0].DATAB
+LoadData[1] => s_next_counter_value[1].DATAB
+LoadData[2] => s_next_counter_value[2].DATAB
+LoadData[3] => s_next_counter_value[3].DATAB
+LoadData[4] => s_next_counter_value[4].DATAB
+LoadData[5] => s_next_counter_value[5].DATAB
+LoadData[6] => s_next_counter_value[6].DATAB
+LoadData[7] => s_next_counter_value[7].DATAB
+Up_n_Down => s_carry.OUTPUTSELECT
+Up_n_Down => always1.IN1
+Up_n_Down => s_next_counter_value.OUTPUTSELECT
+Up_n_Down => s_next_counter_value.OUTPUTSELECT
+Up_n_Down => s_next_counter_value.OUTPUTSELECT
+Up_n_Down => s_next_counter_value.OUTPUTSELECT
+Up_n_Down => s_next_counter_value.OUTPUTSELECT
+Up_n_Down => s_next_counter_value.OUTPUTSELECT
+Up_n_Down => s_next_counter_value.OUTPUTSELECT
+Up_n_Down => s_next_counter_value.OUTPUTSELECT
+clear => s_counter_value[0].ACLR
+clear => s_counter_value[1].ACLR
+clear => s_counter_value[2].ACLR
+clear => s_counter_value[3].ACLR
+clear => s_counter_value[4].ACLR
+clear => s_counter_value[5].ACLR
+clear => s_counter_value[6].ACLR
+clear => s_counter_value[7].ACLR
+load => s_next_counter_value[7].OUTPUTSELECT
+load => s_next_counter_value[6].OUTPUTSELECT
+load => s_next_counter_value[5].OUTPUTSELECT
+load => s_next_counter_value[4].OUTPUTSELECT
+load => s_next_counter_value[3].OUTPUTSELECT
+load => s_next_counter_value[2].OUTPUTSELECT
+load => s_next_counter_value[1].OUTPUTSELECT
+load => s_next_counter_value[0].OUTPUTSELECT
+load => s_real_enable.IN1
+CompareOut <= s_carry.DB_MAX_OUTPUT_PORT_TYPE
+CountValue[0] <= s_counter_value[0].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[1] <= s_counter_value[1].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[2] <= s_counter_value[2].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[3] <= s_counter_value[3].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[4] <= s_counter_value[4].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[5] <= s_counter_value[5].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[6] <= s_counter_value[6].DB_MAX_OUTPUT_PORT_TYPE
+CountValue[7] <= s_counter_value[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|PC:PrCount|NOT_GATE:GATE_2
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Decode_Logic_0a78f3ad:Decode_Logic
+Bit => s_LOGISIM_NET_2.IN1
+Op[0] => s_LOGISIM_BUS_7[0].IN1
+Op[1] => s_LOGISIM_BUS_7[1].IN1
+Op[2] => s_LOGISIM_BUS_7[2].IN2
+Op[3] => s_LOGISIM_BUS_7[3].IN2
+Address <= OR_GATE:GATE_4.Result
+Alu <= OR_GATE_3_INPUTS:GATE_3.Result
+AluCarry <= s_LOGISIM_NET_10.DB_MAX_OUTPUT_PORT_TYPE
+AluLogic <= s_LOGISIM_NET_9.DB_MAX_OUTPUT_PORT_TYPE
+AluOp[0] <= s_LOGISIM_BUS_7[0].DB_MAX_OUTPUT_PORT_TYPE
+AluOp[1] <= s_LOGISIM_BUS_7[1].DB_MAX_OUTPUT_PORT_TYPE
+AluOp[2] <= s_LOGISIM_BUS_7[2].DB_MAX_OUTPUT_PORT_TYPE
+AluOp[3] <= s_LOGISIM_BUS_7[3].DB_MAX_OUTPUT_PORT_TYPE
+Digit <= OR_GATE:GATE_1.Result
+FWright <= s_LOGISIM_NET_10.DB_MAX_OUTPUT_PORT_TYPE
+Jump <= AND_GATE:GATE_2.Result
+
+
+|Block2|main:inst|Decode_Logic_0a78f3ad:Decode_Logic|OR_GATE:GATE_1
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Decode_Logic_0a78f3ad:Decode_Logic|AND_GATE:GATE_2
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Decode_Logic_0a78f3ad:Decode_Logic|Demultiplexer_16:DEMUX_1
+DemuxIn => DemuxOut_0.DATAB
+DemuxIn => DemuxOut_1.DATAB
+DemuxIn => DemuxOut_2.DATAB
+DemuxIn => DemuxOut_3.DATAB
+DemuxIn => DemuxOut_4.DATAB
+DemuxIn => DemuxOut_5.DATAB
+DemuxIn => DemuxOut_6.DATAB
+DemuxIn => DemuxOut_7.DATAB
+DemuxIn => DemuxOut_8.DATAB
+DemuxIn => DemuxOut_9.DATAB
+DemuxIn => DemuxOut_10.DATAB
+DemuxIn => DemuxOut_11.DATAB
+DemuxIn => DemuxOut_12.DATAB
+DemuxIn => DemuxOut_13.DATAB
+DemuxIn => DemuxOut_14.DATAB
+DemuxIn => DemuxOut_15.DATAB
+Enable => DemuxOut_0.IN1
+Enable => DemuxOut_1.IN1
+Enable => DemuxOut_2.IN1
+Enable => DemuxOut_3.IN1
+Enable => DemuxOut_4.IN1
+Enable => DemuxOut_5.IN1
+Enable => DemuxOut_6.IN1
+Enable => DemuxOut_7.IN1
+Enable => DemuxOut_8.IN1
+Enable => DemuxOut_9.IN1
+Enable => DemuxOut_10.IN1
+Enable => DemuxOut_11.IN1
+Enable => DemuxOut_12.IN1
+Enable => DemuxOut_13.IN1
+Enable => DemuxOut_14.IN1
+Enable => DemuxOut_15.IN1
+Sel[0] => Equal0.IN3
+Sel[0] => Equal1.IN0
+Sel[0] => Equal2.IN3
+Sel[0] => Equal3.IN1
+Sel[0] => Equal4.IN3
+Sel[0] => Equal5.IN1
+Sel[0] => Equal6.IN3
+Sel[0] => Equal7.IN2
+Sel[0] => Equal8.IN3
+Sel[0] => Equal9.IN1
+Sel[0] => Equal10.IN3
+Sel[0] => Equal11.IN2
+Sel[0] => Equal12.IN3
+Sel[0] => Equal13.IN2
+Sel[0] => Equal14.IN3
+Sel[0] => Equal15.IN3
+Sel[1] => Equal0.IN2
+Sel[1] => Equal1.IN3
+Sel[1] => Equal2.IN0
+Sel[1] => Equal3.IN0
+Sel[1] => Equal4.IN2
+Sel[1] => Equal5.IN3
+Sel[1] => Equal6.IN1
+Sel[1] => Equal7.IN1
+Sel[1] => Equal8.IN2
+Sel[1] => Equal9.IN3
+Sel[1] => Equal10.IN1
+Sel[1] => Equal11.IN1
+Sel[1] => Equal12.IN2
+Sel[1] => Equal13.IN3
+Sel[1] => Equal14.IN2
+Sel[1] => Equal15.IN2
+Sel[2] => Equal0.IN1
+Sel[2] => Equal1.IN2
+Sel[2] => Equal2.IN2
+Sel[2] => Equal3.IN3
+Sel[2] => Equal4.IN0
+Sel[2] => Equal5.IN0
+Sel[2] => Equal6.IN0
+Sel[2] => Equal7.IN0
+Sel[2] => Equal8.IN1
+Sel[2] => Equal9.IN2
+Sel[2] => Equal10.IN2
+Sel[2] => Equal11.IN3
+Sel[2] => Equal12.IN1
+Sel[2] => Equal13.IN1
+Sel[2] => Equal14.IN1
+Sel[2] => Equal15.IN1
+Sel[3] => Equal0.IN0
+Sel[3] => Equal1.IN1
+Sel[3] => Equal2.IN1
+Sel[3] => Equal3.IN2
+Sel[3] => Equal4.IN1
+Sel[3] => Equal5.IN2
+Sel[3] => Equal6.IN2
+Sel[3] => Equal7.IN3
+Sel[3] => Equal8.IN0
+Sel[3] => Equal9.IN0
+Sel[3] => Equal10.IN0
+Sel[3] => Equal11.IN0
+Sel[3] => Equal12.IN0
+Sel[3] => Equal13.IN0
+Sel[3] => Equal14.IN0
+Sel[3] => Equal15.IN0
+DemuxOut_0 <= DemuxOut_0.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_1 <= DemuxOut_1.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_10 <= DemuxOut_10.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_11 <= DemuxOut_11.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_12 <= DemuxOut_12.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_13 <= DemuxOut_13.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_14 <= DemuxOut_14.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_15 <= DemuxOut_15.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_2 <= DemuxOut_2.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_3 <= DemuxOut_3.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_4 <= DemuxOut_4.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_5 <= DemuxOut_5.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_6 <= DemuxOut_6.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_7 <= DemuxOut_7.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_8 <= DemuxOut_8.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_9 <= DemuxOut_9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Decode_Logic_0a78f3ad:Decode_Logic|OR_GATE_3_INPUTS:GATE_3
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Decode_Logic_0a78f3ad:Decode_Logic|OR_GATE:GATE_4
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1
+A[0] => s_LOGISIM_BUS_29[0].IN1
+A[1] => s_LOGISIM_BUS_29[1].IN1
+A[2] => s_LOGISIM_BUS_29[2].IN1
+A[3] => s_LOGISIM_BUS_29[3].IN1
+B[0] => s_LOGISIM_BUS_30[0].IN1
+B[1] => s_LOGISIM_BUS_30[1].IN1
+B[2] => s_LOGISIM_BUS_30[2].IN1
+B[3] => s_LOGISIM_BUS_30[3].IN1
+CIN => s_LOGISIM_NET_26.IN1
+M => s_LOGISIM_NET_25.IN1
+Op[0] => s_LOGISIM_BUS_37[0].IN1
+Op[1] => s_LOGISIM_BUS_37[1].IN1
+Op[2] => s_LOGISIM_BUS_37[2].IN1
+Op[3] => s_LOGISIM_BUS_37[3].IN1
+A_B_bdc56332 <= s_LOGISIM_NET_15.DB_MAX_OUTPUT_PORT_TYPE
+AluOut[0] <= NOT_GATE:GATE_7.Result
+AluOut[1] <= NOT_GATE:GATE_13.Result
+AluOut[2] <= NOT_GATE:GATE_6.Result
+AluOut[3] <= NOT_GATE:GATE_4.Result
+Sign <= AND_GATE:GATE_11.Result
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_1
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_2
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_3
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_4
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_5
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_6
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_7
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_8
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_9
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_10
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|AND_GATE:GATE_11
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_12
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_13
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|NOT_GATE:GATE_14
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1
+A1 => s_LOGISIM_NET_24.IN3
+A2 => s_LOGISIM_NET_8.IN3
+A3 => s_LOGISIM_NET_31.IN3
+A4 => s_LOGISIM_NET_6.IN3
+B1 => s_LOGISIM_NET_19.IN3
+B2 => s_LOGISIM_NET_50.IN3
+B3 => s_LOGISIM_NET_18.IN3
+B4 => s_LOGISIM_NET_49.IN3
+CIN => s_LOGISIM_NET_39.IN5
+M => s_LOGISIM_NET_29.IN1
+S1 => s_LOGISIM_NET_35.IN4
+S2 => s_LOGISIM_NET_22.IN4
+S3 => s_LOGISIM_NET_9.IN4
+S4 => s_LOGISIM_NET_0.IN4
+COUT <= NOR_GATE:GATE_58.Result
+EQ <= AND_GATE_4_INPUTS:GATE_39.Result
+G <= s_LOGISIM_NET_36.DB_MAX_OUTPUT_PORT_TYPE
+P <= NAND_GATE_4_INPUTS:GATE_56.Result
+Y1 <= s_LOGISIM_NET_37.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= s_LOGISIM_NET_33.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= s_LOGISIM_NET_20.DB_MAX_OUTPUT_PORT_TYPE
+Y4 <= s_LOGISIM_NET_69.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_1
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_2
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_3
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_4
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_5
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE_3_INPUTS:GATE_6
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE_4_INPUTS:GATE_7
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Input_4 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|BUFFER_COMPONENT:GATE_8
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE:GATE_9
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_10
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_11
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE_3_INPUTS:GATE_12
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_13
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_14
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|XOR_GATE_ONEHOT:GATE_15
+Input_1 => Result.IN0
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_16
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE:GATE_17
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|XOR_GATE_ONEHOT:GATE_18
+Input_1 => Result.IN0
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NAND_GATE_5_INPUTS:GATE_19
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Input_4 => Result.IN1
+Input_5 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE:GATE_20
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_5_INPUTS:GATE_21
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Input_4 => Result.IN1
+Input_5 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|BUFFER_COMPONENT:GATE_22
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|XOR_GATE_ONEHOT:GATE_23
+Input_1 => Result.IN0
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_24
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_25
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_4_INPUTS:GATE_26
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Input_4 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_27
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE:GATE_28
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE_3_INPUTS:GATE_29
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE_3_INPUTS:GATE_30
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_4_INPUTS:GATE_31
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Input_4 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_32
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_33
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_34
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_35
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|XOR_GATE_ONEHOT:GATE_36
+Input_1 => Result.IN0
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE_3_INPUTS:GATE_37
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE_4_INPUTS:GATE_38
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Input_4 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_4_INPUTS:GATE_39
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Input_4 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_40
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOT_GATE:GATE_41
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOT_GATE:GATE_42
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE:GATE_43
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|XOR_GATE_ONEHOT:GATE_44
+Input_1 => Result.IN0
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_45
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_46
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_47
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NAND_GATE:GATE_48
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOT_GATE:GATE_49
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|BUFFER_COMPONENT:GATE_50
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE:GATE_51
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOT_GATE:GATE_52
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|XOR_GATE_ONEHOT:GATE_53
+Input_1 => Result.IN0
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|XOR_GATE_ONEHOT:GATE_54
+Input_1 => Result.IN0
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|XOR_GATE_ONEHOT:GATE_55
+Input_1 => Result.IN0
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NAND_GATE_4_INPUTS:GATE_56
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Input_4 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|BUFFER_COMPONENT:GATE_57
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOR_GATE:GATE_58
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_59
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_3_INPUTS:GATE_60
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|AND_GATE_4_INPUTS:GATE_61
+Input_1 => Result.IN0
+Input_2 => Result.IN1
+Input_3 => Result.IN1
+Input_4 => Result.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyALU:MyALU_1|ALU:ALU_1|NOT_GATE:GATE_62
+Input_1 => Result.DATAIN
+Result <= Input_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile
+A[0] => s_LOGISIM_BUS_24[0].IN1
+A[1] => s_LOGISIM_BUS_24[1].IN1
+A[2] => s_LOGISIM_BUS_24[2].IN1
+A[3] => ~NO_FANOUT~
+B[0] => s_LOGISIM_BUS_22[0].IN1
+B[1] => s_LOGISIM_BUS_22[1].IN1
+B[2] => s_LOGISIM_BUS_22[2].IN1
+B[3] => ~NO_FANOUT~
+data[0] => s_LOGISIM_BUS_8[0].IN8
+data[1] => s_LOGISIM_BUS_8[1].IN8
+data[2] => s_LOGISIM_BUS_8[2].IN8
+data[3] => s_LOGISIM_BUS_8[3].IN8
+to[0] => s_LOGISIM_BUS_5[0].IN1
+to[1] => s_LOGISIM_BUS_5[1].IN1
+to[2] => s_LOGISIM_BUS_5[2].IN1
+to[3] => ~NO_FANOUT~
+w => s_LOGISIM_NET_14.IN1
+Output_bus_1[0] <= Multiplexer_bus_8:MUX_1.MuxOut
+Output_bus_1[1] <= Multiplexer_bus_8:MUX_1.MuxOut
+Output_bus_1[2] <= Multiplexer_bus_8:MUX_1.MuxOut
+Output_bus_1[3] <= Multiplexer_bus_8:MUX_1.MuxOut
+Output_bus_2[0] <= Multiplexer_bus_8:MUX_2.MuxOut
+Output_bus_2[1] <= Multiplexer_bus_8:MUX_2.MuxOut
+Output_bus_2[2] <= Multiplexer_bus_8:MUX_2.MuxOut
+Output_bus_2[3] <= Multiplexer_bus_8:MUX_2.MuxOut
+Output_bus_3[0] <= s_LOGISIM_BUS_18[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_3[1] <= s_LOGISIM_BUS_18[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_3[2] <= s_LOGISIM_BUS_18[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_3[3] <= s_LOGISIM_BUS_18[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_4[0] <= s_LOGISIM_BUS_11[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_4[1] <= s_LOGISIM_BUS_11[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_4[2] <= s_LOGISIM_BUS_11[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_4[3] <= s_LOGISIM_BUS_11[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_5[0] <= s_LOGISIM_BUS_12[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_5[1] <= s_LOGISIM_BUS_12[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_5[2] <= s_LOGISIM_BUS_12[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_5[3] <= s_LOGISIM_BUS_12[3].DB_MAX_OUTPUT_PORT_TYPE
+r0[0] <= s_LOGISIM_BUS_7[0].DB_MAX_OUTPUT_PORT_TYPE
+r0[1] <= s_LOGISIM_BUS_7[1].DB_MAX_OUTPUT_PORT_TYPE
+r0[2] <= s_LOGISIM_BUS_7[2].DB_MAX_OUTPUT_PORT_TYPE
+r0[3] <= s_LOGISIM_BUS_7[3].DB_MAX_OUTPUT_PORT_TYPE
+r1[0] <= s_LOGISIM_BUS_19[0].DB_MAX_OUTPUT_PORT_TYPE
+r1[1] <= s_LOGISIM_BUS_19[1].DB_MAX_OUTPUT_PORT_TYPE
+r1[2] <= s_LOGISIM_BUS_19[2].DB_MAX_OUTPUT_PORT_TYPE
+r1[3] <= s_LOGISIM_BUS_19[3].DB_MAX_OUTPUT_PORT_TYPE
+r2[0] <= s_LOGISIM_BUS_4[0].DB_MAX_OUTPUT_PORT_TYPE
+r2[1] <= s_LOGISIM_BUS_4[1].DB_MAX_OUTPUT_PORT_TYPE
+r2[2] <= s_LOGISIM_BUS_4[2].DB_MAX_OUTPUT_PORT_TYPE
+r2[3] <= s_LOGISIM_BUS_4[3].DB_MAX_OUTPUT_PORT_TYPE
+r3[0] <= s_LOGISIM_BUS_20[0].DB_MAX_OUTPUT_PORT_TYPE
+r3[1] <= s_LOGISIM_BUS_20[1].DB_MAX_OUTPUT_PORT_TYPE
+r3[2] <= s_LOGISIM_BUS_20[2].DB_MAX_OUTPUT_PORT_TYPE
+r3[3] <= s_LOGISIM_BUS_20[3].DB_MAX_OUTPUT_PORT_TYPE
+r4[0] <= s_LOGISIM_BUS_21[0].DB_MAX_OUTPUT_PORT_TYPE
+r4[1] <= s_LOGISIM_BUS_21[1].DB_MAX_OUTPUT_PORT_TYPE
+r4[2] <= s_LOGISIM_BUS_21[2].DB_MAX_OUTPUT_PORT_TYPE
+r4[3] <= s_LOGISIM_BUS_21[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|Multiplexer_bus_8:MUX_1
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+MuxIn_0[0] => Mux3.IN0
+MuxIn_0[1] => Mux2.IN0
+MuxIn_0[2] => Mux1.IN0
+MuxIn_0[3] => Mux0.IN0
+MuxIn_1[0] => Mux3.IN1
+MuxIn_1[1] => Mux2.IN1
+MuxIn_1[2] => Mux1.IN1
+MuxIn_1[3] => Mux0.IN1
+MuxIn_2[0] => Mux3.IN2
+MuxIn_2[1] => Mux2.IN2
+MuxIn_2[2] => Mux1.IN2
+MuxIn_2[3] => Mux0.IN2
+MuxIn_3[0] => Mux3.IN3
+MuxIn_3[1] => Mux2.IN3
+MuxIn_3[2] => Mux1.IN3
+MuxIn_3[3] => Mux0.IN3
+MuxIn_4[0] => Mux3.IN4
+MuxIn_4[1] => Mux2.IN4
+MuxIn_4[2] => Mux1.IN4
+MuxIn_4[3] => Mux0.IN4
+MuxIn_5[0] => Mux3.IN5
+MuxIn_5[1] => Mux2.IN5
+MuxIn_5[2] => Mux1.IN5
+MuxIn_5[3] => Mux0.IN5
+MuxIn_6[0] => Mux3.IN6
+MuxIn_6[1] => Mux2.IN6
+MuxIn_6[2] => Mux1.IN6
+MuxIn_6[3] => Mux0.IN6
+MuxIn_7[0] => Mux3.IN7
+MuxIn_7[1] => Mux2.IN7
+MuxIn_7[2] => Mux1.IN7
+MuxIn_7[3] => Mux0.IN7
+Sel[0] => Mux0.IN10
+Sel[0] => Mux1.IN10
+Sel[0] => Mux2.IN10
+Sel[0] => Mux3.IN10
+Sel[1] => Mux0.IN9
+Sel[1] => Mux1.IN9
+Sel[1] => Mux2.IN9
+Sel[1] => Mux3.IN9
+Sel[2] => Mux0.IN8
+Sel[2] => Mux1.IN8
+Sel[2] => Mux2.IN8
+Sel[2] => Mux3.IN8
+MuxOut[0] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[1] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[2] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[3] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|Multiplexer_bus_8:MUX_2
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+MuxIn_0[0] => Mux3.IN0
+MuxIn_0[1] => Mux2.IN0
+MuxIn_0[2] => Mux1.IN0
+MuxIn_0[3] => Mux0.IN0
+MuxIn_1[0] => Mux3.IN1
+MuxIn_1[1] => Mux2.IN1
+MuxIn_1[2] => Mux1.IN1
+MuxIn_1[3] => Mux0.IN1
+MuxIn_2[0] => Mux3.IN2
+MuxIn_2[1] => Mux2.IN2
+MuxIn_2[2] => Mux1.IN2
+MuxIn_2[3] => Mux0.IN2
+MuxIn_3[0] => Mux3.IN3
+MuxIn_3[1] => Mux2.IN3
+MuxIn_3[2] => Mux1.IN3
+MuxIn_3[3] => Mux0.IN3
+MuxIn_4[0] => Mux3.IN4
+MuxIn_4[1] => Mux2.IN4
+MuxIn_4[2] => Mux1.IN4
+MuxIn_4[3] => Mux0.IN4
+MuxIn_5[0] => Mux3.IN5
+MuxIn_5[1] => Mux2.IN5
+MuxIn_5[2] => Mux1.IN5
+MuxIn_5[3] => Mux0.IN5
+MuxIn_6[0] => Mux3.IN6
+MuxIn_6[1] => Mux2.IN6
+MuxIn_6[2] => Mux1.IN6
+MuxIn_6[3] => Mux0.IN6
+MuxIn_7[0] => Mux3.IN7
+MuxIn_7[1] => Mux2.IN7
+MuxIn_7[2] => Mux1.IN7
+MuxIn_7[3] => Mux0.IN7
+Sel[0] => Mux0.IN10
+Sel[0] => Mux1.IN10
+Sel[0] => Mux2.IN10
+Sel[0] => Mux3.IN10
+Sel[1] => Mux0.IN9
+Sel[1] => Mux1.IN9
+Sel[1] => Mux2.IN9
+Sel[1] => Mux3.IN9
+Sel[2] => Mux0.IN8
+Sel[2] => Mux1.IN8
+Sel[2] => Mux2.IN8
+Sel[2] => Mux3.IN8
+MuxOut[0] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[1] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[2] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[3] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|Demultiplexer_8:DEMUX_1
+DemuxIn => DemuxOut_0.DATAB
+DemuxIn => DemuxOut_1.DATAB
+DemuxIn => DemuxOut_2.DATAB
+DemuxIn => DemuxOut_3.DATAB
+DemuxIn => DemuxOut_4.DATAB
+DemuxIn => DemuxOut_5.DATAB
+DemuxIn => DemuxOut_6.DATAB
+DemuxIn => DemuxOut_7.DATAB
+Enable => DemuxOut_0.IN1
+Enable => DemuxOut_1.IN1
+Enable => DemuxOut_2.IN1
+Enable => DemuxOut_3.IN1
+Enable => DemuxOut_4.IN1
+Enable => DemuxOut_5.IN1
+Enable => DemuxOut_6.IN1
+Enable => DemuxOut_7.IN1
+Sel[0] => Equal0.IN2
+Sel[0] => Equal1.IN0
+Sel[0] => Equal2.IN2
+Sel[0] => Equal3.IN1
+Sel[0] => Equal4.IN2
+Sel[0] => Equal5.IN1
+Sel[0] => Equal6.IN2
+Sel[0] => Equal7.IN2
+Sel[1] => Equal0.IN1
+Sel[1] => Equal1.IN2
+Sel[1] => Equal2.IN0
+Sel[1] => Equal3.IN0
+Sel[1] => Equal4.IN1
+Sel[1] => Equal5.IN2
+Sel[1] => Equal6.IN1
+Sel[1] => Equal7.IN1
+Sel[2] => Equal0.IN0
+Sel[2] => Equal1.IN1
+Sel[2] => Equal2.IN1
+Sel[2] => Equal3.IN2
+Sel[2] => Equal4.IN0
+Sel[2] => Equal5.IN0
+Sel[2] => Equal6.IN0
+Sel[2] => Equal7.IN0
+DemuxOut_0 <= DemuxOut_0.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_1 <= DemuxOut_1.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_2 <= DemuxOut_2.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_3 <= DemuxOut_3.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_4 <= DemuxOut_4.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_5 <= DemuxOut_5.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_6 <= DemuxOut_6.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_7 <= DemuxOut_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_8
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_8|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_7
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_7|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_6
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_6|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_5
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_5|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_1
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_1|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_3
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_3|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_4
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_4|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_2
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|Registers:RegFile|MyTrigger:MyTrigger_2|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU
+Input_bus_1[0] => s_LOGISIM_BUS_29[0].IN16
+Input_bus_1[1] => s_LOGISIM_BUS_29[1].IN16
+Input_bus_1[2] => s_LOGISIM_BUS_29[2].IN16
+Input_bus_1[3] => s_LOGISIM_BUS_29[3].IN16
+Input_bus_2[0] => s_LOGISIM_BUS_35[0].IN2
+Input_bus_2[1] => s_LOGISIM_BUS_35[1].IN2
+Input_bus_2[2] => s_LOGISIM_BUS_35[2].IN2
+Input_bus_2[3] => s_LOGISIM_BUS_35[3].IN2
+w => s_LOGISIM_NET_1.IN1
+Output_bus_1[0] <= Multiplexer_bus_16:MUX_1.MuxOut
+Output_bus_1[1] <= Multiplexer_bus_16:MUX_1.MuxOut
+Output_bus_1[2] <= Multiplexer_bus_16:MUX_1.MuxOut
+Output_bus_1[3] <= Multiplexer_bus_16:MUX_1.MuxOut
+Output_bus_2[0] <= s_LOGISIM_BUS_23[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_2[1] <= s_LOGISIM_BUS_23[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_2[2] <= s_LOGISIM_BUS_23[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_2[3] <= s_LOGISIM_BUS_23[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_3[0] <= s_LOGISIM_BUS_24[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_3[1] <= s_LOGISIM_BUS_24[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_3[2] <= s_LOGISIM_BUS_24[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_3[3] <= s_LOGISIM_BUS_24[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_4[0] <= s_LOGISIM_BUS_32[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_4[1] <= s_LOGISIM_BUS_32[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_4[2] <= s_LOGISIM_BUS_32[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_4[3] <= s_LOGISIM_BUS_32[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_5[0] <= s_LOGISIM_BUS_31[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_5[1] <= s_LOGISIM_BUS_31[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_5[2] <= s_LOGISIM_BUS_31[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_5[3] <= s_LOGISIM_BUS_31[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_6[0] <= s_LOGISIM_BUS_25[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_6[1] <= s_LOGISIM_BUS_25[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_6[2] <= s_LOGISIM_BUS_25[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_6[3] <= s_LOGISIM_BUS_25[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_7[0] <= s_LOGISIM_BUS_33[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_7[1] <= s_LOGISIM_BUS_33[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_7[2] <= s_LOGISIM_BUS_33[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_7[3] <= s_LOGISIM_BUS_33[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_8[0] <= s_LOGISIM_BUS_30[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_8[1] <= s_LOGISIM_BUS_30[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_8[2] <= s_LOGISIM_BUS_30[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_8[3] <= s_LOGISIM_BUS_30[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_9[0] <= s_LOGISIM_BUS_15[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_9[1] <= s_LOGISIM_BUS_15[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_9[2] <= s_LOGISIM_BUS_15[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_bus_9[3] <= s_LOGISIM_BUS_15[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|Demultiplexer_16:DEMUX_1
+DemuxIn => DemuxOut_0.DATAB
+DemuxIn => DemuxOut_1.DATAB
+DemuxIn => DemuxOut_2.DATAB
+DemuxIn => DemuxOut_3.DATAB
+DemuxIn => DemuxOut_4.DATAB
+DemuxIn => DemuxOut_5.DATAB
+DemuxIn => DemuxOut_6.DATAB
+DemuxIn => DemuxOut_7.DATAB
+DemuxIn => DemuxOut_8.DATAB
+DemuxIn => DemuxOut_9.DATAB
+DemuxIn => DemuxOut_10.DATAB
+DemuxIn => DemuxOut_11.DATAB
+DemuxIn => DemuxOut_12.DATAB
+DemuxIn => DemuxOut_13.DATAB
+DemuxIn => DemuxOut_14.DATAB
+DemuxIn => DemuxOut_15.DATAB
+Enable => DemuxOut_0.IN1
+Enable => DemuxOut_1.IN1
+Enable => DemuxOut_2.IN1
+Enable => DemuxOut_3.IN1
+Enable => DemuxOut_4.IN1
+Enable => DemuxOut_5.IN1
+Enable => DemuxOut_6.IN1
+Enable => DemuxOut_7.IN1
+Enable => DemuxOut_8.IN1
+Enable => DemuxOut_9.IN1
+Enable => DemuxOut_10.IN1
+Enable => DemuxOut_11.IN1
+Enable => DemuxOut_12.IN1
+Enable => DemuxOut_13.IN1
+Enable => DemuxOut_14.IN1
+Enable => DemuxOut_15.IN1
+Sel[0] => Equal0.IN3
+Sel[0] => Equal1.IN0
+Sel[0] => Equal2.IN3
+Sel[0] => Equal3.IN1
+Sel[0] => Equal4.IN3
+Sel[0] => Equal5.IN1
+Sel[0] => Equal6.IN3
+Sel[0] => Equal7.IN2
+Sel[0] => Equal8.IN3
+Sel[0] => Equal9.IN1
+Sel[0] => Equal10.IN3
+Sel[0] => Equal11.IN2
+Sel[0] => Equal12.IN3
+Sel[0] => Equal13.IN2
+Sel[0] => Equal14.IN3
+Sel[0] => Equal15.IN3
+Sel[1] => Equal0.IN2
+Sel[1] => Equal1.IN3
+Sel[1] => Equal2.IN0
+Sel[1] => Equal3.IN0
+Sel[1] => Equal4.IN2
+Sel[1] => Equal5.IN3
+Sel[1] => Equal6.IN1
+Sel[1] => Equal7.IN1
+Sel[1] => Equal8.IN2
+Sel[1] => Equal9.IN3
+Sel[1] => Equal10.IN1
+Sel[1] => Equal11.IN1
+Sel[1] => Equal12.IN2
+Sel[1] => Equal13.IN3
+Sel[1] => Equal14.IN2
+Sel[1] => Equal15.IN2
+Sel[2] => Equal0.IN1
+Sel[2] => Equal1.IN2
+Sel[2] => Equal2.IN2
+Sel[2] => Equal3.IN3
+Sel[2] => Equal4.IN0
+Sel[2] => Equal5.IN0
+Sel[2] => Equal6.IN0
+Sel[2] => Equal7.IN0
+Sel[2] => Equal8.IN1
+Sel[2] => Equal9.IN2
+Sel[2] => Equal10.IN2
+Sel[2] => Equal11.IN3
+Sel[2] => Equal12.IN1
+Sel[2] => Equal13.IN1
+Sel[2] => Equal14.IN1
+Sel[2] => Equal15.IN1
+Sel[3] => Equal0.IN0
+Sel[3] => Equal1.IN1
+Sel[3] => Equal2.IN1
+Sel[3] => Equal3.IN2
+Sel[3] => Equal4.IN1
+Sel[3] => Equal5.IN2
+Sel[3] => Equal6.IN2
+Sel[3] => Equal7.IN3
+Sel[3] => Equal8.IN0
+Sel[3] => Equal9.IN0
+Sel[3] => Equal10.IN0
+Sel[3] => Equal11.IN0
+Sel[3] => Equal12.IN0
+Sel[3] => Equal13.IN0
+Sel[3] => Equal14.IN0
+Sel[3] => Equal15.IN0
+DemuxOut_0 <= DemuxOut_0.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_1 <= DemuxOut_1.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_10 <= DemuxOut_10.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_11 <= DemuxOut_11.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_12 <= DemuxOut_12.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_13 <= DemuxOut_13.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_14 <= DemuxOut_14.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_15 <= DemuxOut_15.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_2 <= DemuxOut_2.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_3 <= DemuxOut_3.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_4 <= DemuxOut_4.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_5 <= DemuxOut_5.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_6 <= DemuxOut_6.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_7 <= DemuxOut_7.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_8 <= DemuxOut_8.DB_MAX_OUTPUT_PORT_TYPE
+DemuxOut_9 <= DemuxOut_9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|Multiplexer_bus_16:MUX_1
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+Enable => s_selected_vector.OUTPUTSELECT
+MuxIn_0[0] => Mux3.IN0
+MuxIn_0[1] => Mux2.IN0
+MuxIn_0[2] => Mux1.IN0
+MuxIn_0[3] => Mux0.IN0
+MuxIn_1[0] => Mux3.IN1
+MuxIn_1[1] => Mux2.IN1
+MuxIn_1[2] => Mux1.IN1
+MuxIn_1[3] => Mux0.IN1
+MuxIn_10[0] => Mux3.IN2
+MuxIn_10[1] => Mux2.IN2
+MuxIn_10[2] => Mux1.IN2
+MuxIn_10[3] => Mux0.IN2
+MuxIn_11[0] => Mux3.IN3
+MuxIn_11[1] => Mux2.IN3
+MuxIn_11[2] => Mux1.IN3
+MuxIn_11[3] => Mux0.IN3
+MuxIn_12[0] => Mux3.IN4
+MuxIn_12[1] => Mux2.IN4
+MuxIn_12[2] => Mux1.IN4
+MuxIn_12[3] => Mux0.IN4
+MuxIn_13[0] => Mux3.IN5
+MuxIn_13[1] => Mux2.IN5
+MuxIn_13[2] => Mux1.IN5
+MuxIn_13[3] => Mux0.IN5
+MuxIn_14[0] => Mux3.IN6
+MuxIn_14[1] => Mux2.IN6
+MuxIn_14[2] => Mux1.IN6
+MuxIn_14[3] => Mux0.IN6
+MuxIn_15[0] => Mux3.IN7
+MuxIn_15[1] => Mux2.IN7
+MuxIn_15[2] => Mux1.IN7
+MuxIn_15[3] => Mux0.IN7
+MuxIn_2[0] => Mux3.IN8
+MuxIn_2[1] => Mux2.IN8
+MuxIn_2[2] => Mux1.IN8
+MuxIn_2[3] => Mux0.IN8
+MuxIn_3[0] => Mux3.IN9
+MuxIn_3[1] => Mux2.IN9
+MuxIn_3[2] => Mux1.IN9
+MuxIn_3[3] => Mux0.IN9
+MuxIn_4[0] => Mux3.IN10
+MuxIn_4[1] => Mux2.IN10
+MuxIn_4[2] => Mux1.IN10
+MuxIn_4[3] => Mux0.IN10
+MuxIn_5[0] => Mux3.IN11
+MuxIn_5[1] => Mux2.IN11
+MuxIn_5[2] => Mux1.IN11
+MuxIn_5[3] => Mux0.IN11
+MuxIn_6[0] => Mux3.IN12
+MuxIn_6[1] => Mux2.IN12
+MuxIn_6[2] => Mux1.IN12
+MuxIn_6[3] => Mux0.IN12
+MuxIn_7[0] => Mux3.IN13
+MuxIn_7[1] => Mux2.IN13
+MuxIn_7[2] => Mux1.IN13
+MuxIn_7[3] => Mux0.IN13
+MuxIn_8[0] => Mux3.IN14
+MuxIn_8[1] => Mux2.IN14
+MuxIn_8[2] => Mux1.IN14
+MuxIn_8[3] => Mux0.IN14
+MuxIn_9[0] => Mux3.IN15
+MuxIn_9[1] => Mux2.IN15
+MuxIn_9[2] => Mux1.IN15
+MuxIn_9[3] => Mux0.IN15
+Sel[0] => Mux0.IN19
+Sel[0] => Mux1.IN19
+Sel[0] => Mux2.IN19
+Sel[0] => Mux3.IN19
+Sel[1] => Mux0.IN18
+Sel[1] => Mux1.IN18
+Sel[1] => Mux2.IN18
+Sel[1] => Mux3.IN18
+Sel[2] => Mux0.IN17
+Sel[2] => Mux1.IN17
+Sel[2] => Mux2.IN17
+Sel[2] => Mux3.IN17
+Sel[3] => Mux0.IN16
+Sel[3] => Mux1.IN16
+Sel[3] => Mux2.IN16
+Sel[3] => Mux3.IN16
+MuxOut[0] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[1] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[2] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+MuxOut[3] <= s_selected_vector.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_6
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_6|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_12
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_12|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_4
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_4|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_8
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_8|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_7
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_7|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_2
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_2|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_14
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_14|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_11
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_11|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_5
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_5|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_9
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_9|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_13
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_13|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_3
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_3|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_15
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_15|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_16
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_16|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_1
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_1|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_10
+Clock => s_LOGISIM_NET_2.IN1
+InputData[0] => s_LOGISIM_BUS_1[0].IN1
+InputData[1] => s_LOGISIM_BUS_1[1].IN1
+InputData[2] => s_LOGISIM_BUS_1[2].IN1
+InputData[3] => s_LOGISIM_BUS_1[3].IN1
+OutData[0] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[1] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[2] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+OutData[3] <= REGISTER_FLIP_FLOP:REGISTER_FILE_1.Q
+
+
+|Block2|main:inst|MyRam:RAM_CPU|MyTrigger:MyTrigger_10|REGISTER_FLIP_FLOP:REGISTER_FILE_1
+Clock => s_state_reg[0].CLK
+Clock => s_state_reg[1].CLK
+Clock => s_state_reg[2].CLK
+Clock => s_state_reg[3].CLK
+ClockEnable => always0.IN0
+D[0] => s_state_reg[0].DATAIN
+D[1] => s_state_reg[1].DATAIN
+D[2] => s_state_reg[2].DATAIN
+D[3] => s_state_reg[3].DATAIN
+Reset => s_state_reg[0].ACLR
+Reset => s_state_reg[1].ACLR
+Reset => s_state_reg[2].ACLR
+Reset => s_state_reg[3].ACLR
+Tick => always0.IN1
+Q[0] <= s_state_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_state_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_state_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_state_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

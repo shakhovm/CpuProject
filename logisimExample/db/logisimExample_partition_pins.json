@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "OP[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r7[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r7[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r7[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r7[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
